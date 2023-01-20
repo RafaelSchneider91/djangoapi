@@ -24,5 +24,6 @@ router.register(r'alunos', AlunoViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include(router.urls)),
+    path("home/", include(router.urls)),
+    path("auth/", include('usuarios.urls'))
 ]
